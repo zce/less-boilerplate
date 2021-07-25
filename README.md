@@ -1,7 +1,7 @@
 # 管理Sass项目文件结构
 
-> 本文由大漠根据Hugo Giraudel的《Architecture for a Sass Project》所译，整个译文带有我们自己的理解与思想，如果译得不好或有不对之处还请同行朋友指点。如需转载此译文，需注明英文出处：http://www.sitepoint.com/architecture-sass-project。
-> - ——作者：[Hugo Giraudel](http://www.sitepoint.com/author/hgiraudel)
+> 本文由大漠根据Kitty Giraudel的《Architecture for a Sass Project》所译，整个译文带有我们自己的理解与思想，如果译得不好或有不对之处还请同行朋友指点。如需转载此译文，需注明英文出处：http://www.sitepoint.com/architecture-sass-project。
+> - ——作者：[Kitty Giraudel](http://www.sitepoint.com/author/kittygiraudel)
 > - ——译者：[大漠](http://www.w3cplus.com/)
 
 回想起来，我们以前做的事情主要是围绕着CSS打转。你是否还记得，你曾彻夜不眠的在努力写CSS。Year!写了上千行的代码——通常是写得不好——为了解决一些IE的bug，或者为了找到一个属性值，我们不得不努力去寻找这样的一个值。
@@ -12,7 +12,7 @@
 
 *****
 
-> CSS变得更有趣，更复杂。——@[Hugo Giraudel](http://www.sitepoint.com/author/hgiraudel)
+> CSS变得更有趣，更复杂。——@[Kitty Giraudel](http://www.sitepoint.com/author/hgiraudel)
 
 所以我们有很多东西需要处理，这样一来，如何组织项目文件就变得非常的重要。我想大家都同意这样的观点，但实现起来并不太容易。所以我写了这篇文章，将会告诉你应该怎么去想，比告诉你怎么做要更好，否则，我就离开你了。
 
@@ -82,7 +82,7 @@ sass/
 `– main.scss             # primary Sass file
 ```
 
-正如你所看到的，在根目录底下只有一个`main.scss`文件，其他`.scss`文件都根据不同的分类放在对应的文件夹中，只是这些.scss文件前面都有一个下划线(_)，用来告诉Sass，这些`.scss`文件只是[局部](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#partials)，不通过`@import`是不应该被编译出`.css`文件。事实上，它们是导入和合并文件的[基本文件](https://gist.github.com/HugoGiraudel/8615243)而以。
+正如你所看到的，在根目录底下只有一个`main.scss`文件，其他`.scss`文件都根据不同的分类放在对应的文件夹中，只是这些.scss文件前面都有一个下划线(_)，用来告诉Sass，这些`.scss`文件只是[局部](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#partials)，不通过`@import`是不应该被编译出`.css`文件。事实上，它们是导入和合并文件的[基本文件](https://gist.github.com/KittyGiraudel/8615243)而以。
 
 > 一个文件可以解决所有问题，一个文件可以找到他们，一个文件给他们带来了所有的一切，Sass只是将他们合并在一起。——@J.R.R. Tolkien
 
